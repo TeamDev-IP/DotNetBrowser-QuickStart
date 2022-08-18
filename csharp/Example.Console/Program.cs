@@ -20,6 +20,7 @@
 
 #endregion
 
+// #docfragment "Example.Console"
 using System;
 using DotNetBrowser.Browser;
 using DotNetBrowser.Engine;
@@ -42,3 +43,4 @@ namespace Example.Console
         }
     }
 }
+// #enddocfragment "Example.Console"

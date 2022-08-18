@@ -20,6 +20,7 @@
 
 #End Region
 
+' #docfragment "Example.Console"
 Imports System
 Imports DotNetBrowser.Browser
 Imports DotNetBrowser.Engine
@@ -38,3 +39,4 @@ Namespace Example.Console
 		End Sub
 	End Class
 End Namespace
+' #enddocfragment "Example.Console"
