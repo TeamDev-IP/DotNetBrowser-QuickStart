@@ -25,4 +25,4 @@ dotnet cake --lang="csharp" --ui="wpf" --license-key="your_license_key"
 
  - `--license-key` Required. The license key used for launching the application.
  - `--lang` Optional. Can be either `csharp` or `vbnet`. The default value is `csharp`.
- - `--ui` Optional. Can be either `wpf` or `winforms`. The default value is `wpf`.
+ - `--ui` Optional. Can be either `console`, `wpf`, or `winforms`. The default value is `console`.
