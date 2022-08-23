@@ -63,7 +63,7 @@ Task("Run")
     .IsDependentOn("Build")
     .Does(() =>
 {
-    var project = ui == "console" ? "example.console" : $"embedding.{ui}" ;
+    var project = ui == "console" ? "Example.Console" : $"embedding.{ui}" ;
     var path = $"./{lang}/{project}";
     var settings = new DotNetRunSettings
     {
