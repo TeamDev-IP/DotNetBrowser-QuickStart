@@ -10,10 +10,10 @@
     <RootNamespace />
   </PropertyGroup>
 
-  <ItemGroup Label="Build on Unix" '$(OS)' == 'Unix'">
+  <ItemGroup Label="Build on Unix" Condition="'$(OS)' == 'Unix'">
     <PackageReference Include="DotNetBrowser.CrossPlatform" Version="2.16.0" />
   </ItemGroup>
-  <ItemGroup Label="Build on Windows" '$(OS)' != 'Unix'">
+  <ItemGroup Label="Build on Windows" Condition="'$(OS)' != 'Unix'">
     <PackageReference Include="DotNetBrowser" Version="2.16.0" />
   </ItemGroup>
 
