@@ -28,7 +28,11 @@ Imports DotNetBrowser.Engine
 Namespace Example.Console
 	Friend Class Program
 		Public Shared Sub Main(args() As String)
-			Using engine As IEngine = EngineFactory.Create()
+		    Dim builder = new EngineOptions.Builder()
+		    ' Uncomment the line below to specify your license key
+		    'builder.LicenseKey = "your_license_key"
+
+			Using engine As IEngine = EngineFactory.Create(builder.Build())
 				Dim browser As IBrowser = engine.CreateBrowser()
 				browser.Navigation _
 				       .LoadUrl("https://html5test.com/").Wait()
