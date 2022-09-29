@@ -30,12 +30,11 @@ Namespace Example.Console
 		Public Shared Sub Main(args() As String)
 			Using engine As IEngine = EngineFactory.Create()
 				Dim browser As IBrowser = engine.CreateBrowser()
-				browser.Navigation.LoadUrl("https://html5test.com/").Wait()
-				System.Console.WriteLine($"Web page title: {browser.Title}")
+				browser.Navigation _
+				       .LoadUrl("https://html5test.com/").Wait()
+			    Dim title = browser.Title
+			    System.Console.WriteLine($"Web page title: {title}")
 			End Using
-
-			System.Console.WriteLine("Press any key to terminate...")
-			System.Console.ReadKey()
 		End Sub
 	End Class
 End Namespace

@@ -34,12 +34,11 @@ namespace Example.Console
             using (IEngine engine = EngineFactory.Create())
             {
                 IBrowser browser = engine.CreateBrowser();
-                browser.Navigation.LoadUrl("https://html5test.com/").Wait();
-                System.Console.WriteLine($"Web page title: {browser.Title}");
+                browser.Navigation
+                       .LoadUrl("https://html5test.com/").Wait();
+                string title = browser.Title;
+                System.Console.WriteLine($"Web page title: {title}");
             }
-
-            System.Console.WriteLine("Press any key to terminate...");
-            System.Console.ReadKey();
         }
     }
 }
