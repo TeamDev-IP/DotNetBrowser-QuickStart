@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UseWPF Condition="'$(OS)' != 'Unix'">true</UseWPF>
+    <UseWpf Condition="'$(OS)' == 'Windows_NT'">true</UseWpf>
     <AssemblyName>Embedding.Wpf</AssemblyName>
     <RootNamespace>Embedding.Wpf</RootNamespace>
   </PropertyGroup>

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UseWindowsForms Condition="'$(OS)' != 'Unix'">true</UseWindowsForms>
+    <UseWindowsForms Condition="'$(OS)' == 'Windows_NT'">true</UseWindowsForms>
     <AssemblyName>Embedding.WinForms</AssemblyName>
   </PropertyGroup>
 
