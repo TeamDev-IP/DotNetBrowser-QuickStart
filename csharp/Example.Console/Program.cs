@@ -31,15 +31,18 @@ namespace Example.Console
     {
         private static void Main(string[] args)
         {
-            using (IEngine engine = EngineFactory.Create())
+            EngineOptions.Builder builder = new EngineOptions.Builder();
+            // Uncomment the line below to specify your license key
+            //builder.LicenseKey = "your_license_key";
+
+            using (IEngine engine = EngineFactory.Create(builder.Build()))
             {
                 IBrowser browser = engine.CreateBrowser();
-                browser.Navigation.LoadUrl("https://html5test.com/").Wait();
-                System.Console.WriteLine($"Web page title: {browser.Title}");
+                browser.Navigation
+                       .LoadUrl("https://html5test.com/").Wait();
+                string title = browser.Title;
+                System.Console.WriteLine($"Web page title: {title}");
             }
-
-            System.Console.WriteLine("Press any key to terminate...");
-            System.Console.ReadKey();
         }
     }
 }

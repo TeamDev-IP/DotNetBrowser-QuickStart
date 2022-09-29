@@ -28,14 +28,17 @@ Imports DotNetBrowser.Engine
 Namespace Example.Console
 	Friend Class Program
 		Public Shared Sub Main(args() As String)
-			Using engine As IEngine = EngineFactory.Create()
-				Dim browser As IBrowser = engine.CreateBrowser()
-				browser.Navigation.LoadUrl("https://html5test.com/").Wait()
-				System.Console.WriteLine($"Web page title: {browser.Title}")
-			End Using
+		    Dim builder = new EngineOptions.Builder()
+		    ' Uncomment the line below to specify your license key
+		    'builder.LicenseKey = "your_license_key"
 
-			System.Console.WriteLine("Press any key to terminate...")
-			System.Console.ReadKey()
+			Using engine As IEngine = EngineFactory.Create(builder.Build())
+				Dim browser As IBrowser = engine.CreateBrowser()
+				browser.Navigation _
+				       .LoadUrl("https://html5test.com/").Wait()
+			    Dim title = browser.Title
+			    System.Console.WriteLine($"Web page title: {title}")
+			End Using
 		End Sub
 	End Class
 End Namespace
