@@ -3,13 +3,13 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UseWindowsForms>true</UseWindowsForms>
+    <UseWindowsForms Condition="'$(OS)' == 'Windows_NT'">true</UseWindowsForms>
     <AssemblyName>Embedding.WinForms</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetBrowser" Version="2.16.1" />
-    <PackageReference Include="DotNetBrowser.WinForms" Version="2.16.1" />
+    <PackageReference Include="DotNetBrowser" Version="2.17.0" />
+    <PackageReference Include="DotNetBrowser.WinForms" Version="2.17.0" />
     <PackageReference Include="protobuf-net" Version="2.4.4" />
     <PackageReference Include="protobuf-net.Reflection" Version="2.3.17" />
   </ItemGroup>

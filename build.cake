@@ -21,6 +21,10 @@ Setup(setupContext =>
     {
         throw new Exception("The license key is not specified.");
     }
+    if(!IsRunningOnWindows() && ui != "console")
+    {
+        throw new Exception("WPF and Windows Forms are not supported on non-Windows environments.");
+    }
 
 });
 
@@ -42,17 +46,24 @@ Task("Build")
     .IsDependentOn("Restore-NuGet-Packages")
     .Does(() =>
 {
-    DotNetBuild($"./{lang}/DotNetBrowser.QuickStart.sln", new DotNetBuildSettings
+    if(IsRunningOnWindows())
     {
-        Configuration = "Release",
-    });
+        DotNetBuild($"./{lang}/DotNetBrowser.QuickStart.sln", new DotNetBuildSettings
+        {
+            Configuration = "Release",
+        });
+    }
+    else
+    {
+        Information("Skipping solution build in non-Windows environment");
+    }
 });
 
 Task("Run")
     .IsDependentOn("Build")
     .Does(() =>
 {
-    var project = ui == "console" ? "example.console" : $"embedding.{ui}" ;
+    var project = ui == "console" ? "Example.Console" : $"embedding.{ui}" ;
     var path = $"./{lang}/{project}";
     var settings = new DotNetRunSettings
     {
