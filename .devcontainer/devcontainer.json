@@ -1,0 +1,21 @@
+{
+	"name": "C# (.NET)",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"hostRequirements": {
+		"cpus": 4,
+		"memory": "4gb",
+		"storage": "32gb" 
+	},
+	"features": {},
+
+	// Set DOTNETBROWSER_LICENSE for the whole container according to its value in the local environment.
+	// This also works with GitHub secrets with Codespaces.
+	"containerEnv": {
+		"DOTNETBROWSER_LICENSE": "${localEnv:DOTNETBROWSER_LICENSE}"
+	},
+	
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "sudo /etc/init.d/xvfb start && dotnet tool restore"
+}
