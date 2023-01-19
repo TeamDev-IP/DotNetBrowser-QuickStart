@@ -1,5 +1,5 @@
 {
-	"name": "C# (.NET)",
+	"name": "DotNetBrowser (.NET 6)",
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
@@ -11,7 +11,8 @@
 	"features": {},
 
 	// Set DOTNETBROWSER_LICENSE for the whole container according to its value in the local environment.
-	// This also works with GitHub secrets with Codespaces.
+	// This can be used to pass the license key to DotNetBrowser.
+	// This also works if the license is stored in GitHub secrets.
 	"containerEnv": {
 		"DOTNETBROWSER_LICENSE": "${localEnv:DOTNETBROWSER_LICENSE}"
 	},

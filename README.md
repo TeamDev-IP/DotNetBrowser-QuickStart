@@ -26,3 +26,11 @@ dotnet cake --lang="csharp" --ui="wpf" --license-key="your_license_key"
  - `--license-key` Required. The license key used for launching the application.
  - `--lang` Optional. Can be either `csharp` or `vbnet`. The default value is `csharp`.
  - `--ui` Optional. Can be either `console`, `wpf`, or `winforms`. The default value is `console`.
+
+## Development container
+
+This repository contains the development container (devcontainer) configuration that can be used to easily create a Linux-based development environment and work with DotNetBrowser there.
+
+You can use any of the [supported tools](https://containers.dev/supporting) to create a devcontainer and work with it. After the container is ready and the post-create command is executed, you can use the steps from the section above to build and run an example.
+
+*Note*: Linux environments do not support WPF or Windows Forms, so, only the console example can be used in this environment.
