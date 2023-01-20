@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6</TargetFramework>
+    <TargetFramework>net6-windows</TargetFramework>
     <UseWindowsForms Condition="'$(OS)' == 'Windows_NT'">true</UseWindowsForms>
     <AssemblyName>Embedding.WinForms</AssemblyName>
   </PropertyGroup>
