@@ -17,6 +17,6 @@
 		"DOTNETBROWSER_LICENSE": "${localEnv:DOTNETBROWSER_LICENSE}"
 	},
 	
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo /etc/init.d/xvfb start && dotnet tool restore"
+	// Start Xvfb whenever the container is started.
+	"postStartCommand": "sudo /etc/init.d/xvfb start && dotnet tool restore"
 }
