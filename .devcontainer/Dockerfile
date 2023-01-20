@@ -18,5 +18,5 @@ RUN apt-get update && \
 
 ENV DISPLAY :0
 
-ADD xvfb_init /etc/init.d/xvfb
+ADD xvfb_init.sh /etc/init.d/xvfb
 RUN chmod a+x /etc/init.d/xvfb
