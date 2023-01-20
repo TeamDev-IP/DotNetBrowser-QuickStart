@@ -4,7 +4,7 @@ This repository contains the examples for the [Quick Start](https://dotnetbrowse
 
 ## Prerequisites
 Make sure your environment meets the
-[software and hardware requirements](https://dotnetbrowser-support.teamdev.com/docs/guides/requirements.html). Additionally, .NET Core SDK 3.1 or higher must be installed.
+[software and hardware requirements](https://dotnetbrowser-support.teamdev.com/docs/guides/requirements.html). Additionally, .NET 6 SDK or higher must be installed.
 
 Request a free 30-day evaluation license key via the [web form](https://www.teamdev.com/dotnetbrowser#evaluate).
 
