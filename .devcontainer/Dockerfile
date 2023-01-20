@@ -5,8 +5,8 @@ RUN apt-get update && \
     apt-get -y install --no-install-recommends \
         libgtk2.0-0 \
         libgtk-3-0 \
-        libgbm-dev \
-        libnotify-dev \
+        libgbm1 \
+        libnotify4 \
         libgconf-2-4 \
         libnss3 \
         libxss1 \
