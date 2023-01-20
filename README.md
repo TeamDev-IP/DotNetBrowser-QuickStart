@@ -31,6 +31,11 @@ dotnet cake --lang="csharp" --ui="wpf" --license-key="your_license_key"
 
 This repository contains the development container (devcontainer) configuration that can be used to easily create a Linux-based development environment and work with DotNetBrowser there.
 
-You can use any of the [supported tools](https://containers.dev/supporting) to create a devcontainer and work with it. After the container is ready and the post-create command is executed, you can use the steps from the section above to build and run an example.
+You can use any of the [supported tools](https://containers.dev/supporting) to create a devcontainer and work with it. After the container is ready and the post-create command is executed, you can use the steps from the section above to build and run an example:
 
-*Note*: Linux environments do not support WPF or Windows Forms, so, only the console example can be used in this environment.
+```
+dotnet tool restore
+dotnet cake --lang="csharp" --ui="console" --license-key="your_license_key"
+```
+
+*Note*: Development container is a headless Linux environment, and these environments do not support WPF or Windows Forms. Therefore, only the console example can be used.
