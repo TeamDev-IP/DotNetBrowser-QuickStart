@@ -4,9 +4,9 @@
 		"dockerfile": "Dockerfile"
 	},
 	"hostRequirements": {
-		"cpus": 4,
+		"cpus": 2,
 		"memory": "4gb",
-		"storage": "32gb" 
+		"storage": "12gb" 
 	},
 	"features": {},
 
