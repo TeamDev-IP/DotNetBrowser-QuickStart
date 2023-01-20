@@ -1,0 +1,22 @@
+{
+	"name": "DotNetBrowser (.NET 6)",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"hostRequirements": {
+		"cpus": 2,
+		"memory": "4gb",
+		"storage": "12gb" 
+	},
+	"features": {},
+
+	// Set DOTNETBROWSER_LICENSE for the whole container according to its value in the local environment.
+	// This can be used to pass the license key to DotNetBrowser.
+	// This also works if the license is stored in GitHub secrets.
+	"containerEnv": {
+		"DOTNETBROWSER_LICENSE": "${localEnv:DOTNETBROWSER_LICENSE}"
+	},
+	
+	// Start Xvfb whenever the container is started.
+	"postStartCommand": "sudo /etc/init.d/xvfb start && dotnet tool restore"
+}

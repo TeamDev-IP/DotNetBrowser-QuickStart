@@ -26,3 +26,4 @@
 *.filters text eol=crlf
 
 *.patch eol=lf
+*.sh eol=lf
