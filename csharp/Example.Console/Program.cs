@@ -23,27 +23,24 @@
 // #docfragment "Example.Console"
 using System;
 using DotNetBrowser.Browser;
+using DotNetBrowser.Dom;
 using DotNetBrowser.Engine;
 
-namespace Example.Console
-{
-    internal class Program
-    {
-        private static void Main(string[] args)
-        {
-            EngineOptions.Builder builder = new EngineOptions.Builder();
-            // Uncomment the line below to specify your license key
-            // builder.LicenseKey = "your_license_key";
+EngineOptions.Builder builder = new EngineOptions.Builder();
+// Uncomment the line below to specify your license key
+// builder.LicenseKey = "your_license_key";
 
-            using (IEngine engine = EngineFactory.Create(builder.Build()))
-            {
-                IBrowser browser = engine.CreateBrowser();
-                browser.Navigation
-                       .LoadUrl("https://html5test.com/").Wait();
-                string title = browser.Title;
-                System.Console.WriteLine($"Web page title: {title}");
-            }
-        }
-    }
+using (IEngine engine = EngineFactory.Create(builder.Build()))
+{
+    IBrowser browser = engine.CreateBrowser();
+    browser.Navigation
+        .LoadUrl("https://quotes.toscrape.com/random").Wait();
+
+    IDocument document = browser.MainFrame.Document;
+    string quote = document.GetElementByClassName("text")?.InnerText;
+    string author = document.GetElementByClassName("author")?.InnerText;
+
+    Console.WriteLine(quote);
+    Console.WriteLine($"— {author}");
 }
 // #enddocfragment "Example.Console"

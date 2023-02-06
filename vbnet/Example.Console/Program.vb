@@ -21,25 +21,28 @@
 #End Region
 
 ' #docfragment "Example.Console"
-Imports System
 Imports DotNetBrowser.Browser
 Imports DotNetBrowser.Engine
 
-Namespace Example.Console
-	Friend Class Program
-		Public Shared Sub Main(args() As String)
-		    Dim builder = new EngineOptions.Builder()
-		    ' Uncomment the line below to specify your license key
-		    ' builder.LicenseKey = "your_license_key"
+Module Program
+	Sub Main(args() As String)
+		Dim builder = new EngineOptions.Builder()
+		' Uncomment the line below to specify your license key
+		' builder.LicenseKey = "your_license_key"
 
-			Using engine As IEngine = EngineFactory.Create(builder.Build())
-				Dim browser As IBrowser = engine.CreateBrowser()
-				browser.Navigation _
-				       .LoadUrl("https://html5test.com/").Wait()
-			    Dim title = browser.Title
-			    System.Console.WriteLine($"Web page title: {title}")
-			End Using
-		End Sub
-	End Class
-End Namespace
+		Using engine As IEngine = EngineFactory.Create(builder.Build())
+			Dim browser As IBrowser = engine.CreateBrowser()
+
+			browser.Navigation _
+			        .LoadUrl("https://quotes.toscrape.com/random").Wait()
+
+			Dim document = browser.MainFrame.Document
+			Dim quote = document.GetElementByClassName("text")?.InnerText
+			Dim author = document.GetElementByClassName("author")?.InnerText
+
+			System.Console.WriteLine(quote)
+			System.Console.WriteLine($"— {author}")
+		End Using
+	End Sub
+End Module
 ' #enddocfragment "Example.Console"
