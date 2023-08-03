@@ -11,10 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup Label="Build on Unix" Condition="'$(OS)' == 'Unix'">
-    <PackageReference Include="DotNetBrowser.CrossPlatform" Version="2.23.1" />
+    <PackageReference Include="DotNetBrowser.CrossPlatform" Version="2.23.2" />
   </ItemGroup>
   <ItemGroup Label="Build on Windows" Condition="'$(OS)' != 'Unix'">
-    <PackageReference Include="DotNetBrowser" Version="2.23.1" />
+    <PackageReference Include="DotNetBrowser" Version="2.23.2" />
   </ItemGroup>
 
 </Project>
