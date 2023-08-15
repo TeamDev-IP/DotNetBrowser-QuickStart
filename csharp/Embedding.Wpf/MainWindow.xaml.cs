@@ -34,7 +34,7 @@ namespace Embedding.Wpf
     /// </summary>
     public partial class MainWindow : Window
     {
-        private const string Url = "https://html5test.com/";
+        private const string Url = "https://dotnetbrowser-support.teamdev.com/";
         private readonly IBrowser browser;
         private readonly IEngine engine;
 
