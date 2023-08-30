@@ -20,13 +20,13 @@
 
 #endregion
 
-// #docfragment "Embedding.Avalonia"
+// #docfragment "Embedding.AvaloniaUI"
 using System;
 using Avalonia.Controls;
 using DotNetBrowser.Browser;
 using DotNetBrowser.Engine;
 
-namespace Embedding.Avalonia;
+namespace Embedding.AvaloniaUI;
 
 /// <summary>
 ///     This example demonstrates how to embed DotNetBrowser
@@ -63,4 +63,4 @@ public partial class MainWindow : Window
         engine?.Dispose();
     }
 }
-// #enddocfragment "Embedding.Avalonia"
+// #enddocfragment "Embedding.AvaloniaUI"

@@ -23,7 +23,7 @@
 using Avalonia;
 using System;
 
-namespace Embedding.Avalonia;
+namespace Embedding.AvaloniaUI;
 
 class Program
 {
