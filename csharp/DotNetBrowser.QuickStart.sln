@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Embedding.Wpf", "Embedding.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Console", "Example.Console\Example.Console.csproj", "{D6BE2FB0-7F05-4A90-8B66-B05C41CD775A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Embedding.AvaloniaUI", "Embedding.Avalonia\Embedding.AvaloniaUI.csproj", "{17C91F3A-3ECA-4085-961F-FFF8C4879665}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Embedding.AvaloniaUi", "Embedding.Avalonia\Embedding.AvaloniaUi.csproj", "{17C91F3A-3ECA-4085-961F-FFF8C4879665}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

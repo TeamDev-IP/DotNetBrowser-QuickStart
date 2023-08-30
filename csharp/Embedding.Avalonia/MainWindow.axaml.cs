@@ -20,47 +20,49 @@
 
 #endregion
 
-// #docfragment "Embedding.AvaloniaUI"
+// #docfragment "Embedding.Avalonia"
 using System;
 using Avalonia.Controls;
 using DotNetBrowser.Browser;
 using DotNetBrowser.Engine;
 
-namespace Embedding.AvaloniaUI;
-
-/// <summary>
-///     This example demonstrates how to embed DotNetBrowser
-///     into an Avalonia application.
-/// </summary>
-public partial class MainWindow : Window
+namespace Embedding.AvaloniaUi
 {
-    private const string Url = "https://dotnetbrowser-support.teamdev.com/";
-    private readonly IBrowser browser;
-    private readonly IEngine engine;
 
-    public MainWindow()
+    /// <summary>
+    ///     This example demonstrates how to embed DotNetBrowser
+    ///     into an Avalonia application.
+    /// </summary>
+    public partial class MainWindow : Window
     {
-        // Create and initialize the IEngine instance.
-        EngineOptions engineOptions = new EngineOptions.Builder
+        private const string Url = "https://dotnetbrowser-support.teamdev.com/";
+        private readonly IBrowser browser;
+        private readonly IEngine engine;
+
+        public MainWindow()
         {
-            //LicenseKey = "your_license_key"
-        }.Build();
-        engine = EngineFactory.Create(engineOptions);
+            // Create and initialize the IEngine instance.
+            EngineOptions engineOptions = new EngineOptions.Builder
+            {
+                //LicenseKey = "your_license_key"
+            }.Build();
+            engine = EngineFactory.Create(engineOptions);
 
-        // Create the IBrowser instance.
-        browser = engine.CreateBrowser();
+            // Create the IBrowser instance.
+            browser = engine.CreateBrowser();
 
-        InitializeComponent();
+            InitializeComponent();
 
-        // Initialize the Avalonia UI BrowserView control.
-        BrowserView.InitializeFrom(browser);
-        browser.Navigation.LoadUrl(Url);
-    }
+            // Initialize the Avalonia UI BrowserView control.
+            BrowserView.InitializeFrom(browser);
+            browser.Navigation.LoadUrl(Url);
+        }
 
-    private void Window_Closed(object? sender, EventArgs e)
-    {
-        browser?.Dispose();
-        engine?.Dispose();
+        private void Window_Closed(object? sender, EventArgs e)
+        {
+            browser?.Dispose();
+            engine?.Dispose();
+        }
     }
 }
-// #enddocfragment "Embedding.AvaloniaUI"
+// #enddocfragment "Embedding.Avalonia"

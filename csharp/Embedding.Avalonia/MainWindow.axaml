@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:app="clr-namespace:DotNetBrowser.AvaloniaUi;assembly=DotNetBrowser.AvaloniaUi"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="Embedding.AvaloniaUI.MainWindow"
-        Title="Embedding.AvaloniaUI" Closed="Window_Closed">
+        x:Class="Embedding.AvaloniaUi.MainWindow"
+        Title="Embedding.AvaloniaUi" Closed="Window_Closed">
     <app:BrowserView x:Name="BrowserView"/>
 </Window>
