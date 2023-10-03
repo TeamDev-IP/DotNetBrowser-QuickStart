@@ -13,15 +13,15 @@ Setup(setupContext =>
     {
         throw new Exception("The --lang argument should be set to either \"csharp\" or \"vbnet\".");
     }
-    if (ui != "wpf" && ui != "winforms" && ui != "console")
+    if (ui != "wpf" && ui != "winforms" && ui != "console" && ui != "avalonia")
     {
-        throw new Exception("The --ui argument should be set to either \"console\", \"wpf\", or \"winforms\".");
+        throw new Exception("The --ui argument should be set to either \"console\", \"wpf\", or \"winforms\", or \"avalonia\".");
     }
     if (string.IsNullOrWhiteSpace(licenseKey))
     {
         throw new Exception("The license key is not specified.");
     }
-    if(!IsRunningOnWindows() && ui != "console")
+    if(!IsRunningOnWindows() && ui != "avalonia" && ui != "console")
     {
         throw new Exception("WPF and Windows Forms are not supported on non-Windows environments.");
     }
@@ -63,7 +63,7 @@ Task("Run")
     .IsDependentOn("Build")
     .Does(() =>
 {
-    var project = ui == "console" ? "Example.Console" : $"embedding.{ui}" ;
+    var project = ui == "console" ? "Example.Console" : $"Embedding.{ui.ToUpper().Substring(0, 1) + ui.Substring(1)}";
     var path = $"./{lang}/{project}";
     var settings = new DotNetRunSettings
     {
