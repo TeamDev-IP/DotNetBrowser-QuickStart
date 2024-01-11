@@ -1,4 +1,4 @@
-﻿Imports Avalonia
+Imports Avalonia
 Imports Avalonia.Controls.ApplicationLifetimes
 Imports Avalonia.Markup.Xaml
 
