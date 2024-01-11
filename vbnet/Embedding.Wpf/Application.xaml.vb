@@ -1,4 +1,4 @@
-﻿Imports System.Windows
+Imports System.Windows
 
 Namespace Embedding.Wpf
 	''' <summary>
