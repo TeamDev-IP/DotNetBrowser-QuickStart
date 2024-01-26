@@ -34,7 +34,7 @@ namespace Embedding.WinForms
     /// </summary>
     public partial class Form1 : Form
     {
-        private const string Url = "https://dotnetbrowser-support.teamdev.com/";
+        private const string Url = "https://html5test.teamdev.com/";
         private readonly IBrowser browser;
         private readonly IEngine engine;
 
