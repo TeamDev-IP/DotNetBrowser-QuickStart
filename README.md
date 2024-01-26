@@ -1,12 +1,12 @@
 # Welcome to DotNetBrowser QuickStart
 
-This repository contains the examples for the [Quick Start](https://dotnetbrowser-support.teamdev.com/docs/quickstart/) guide.
+This repository contains the examples for the [Quick Start](https://teamdev.com/dotnetbrowser/docs/quickstart/) guide.
 
 ## Prerequisites
 Make sure your environment meets the
-[software and hardware requirements](https://dotnetbrowser-support.teamdev.com/docs/guides/requirements.html). Additionally, .NET 6 SDK or higher must be installed.
+[software and hardware requirements](https://teamdev.com/dotnetbrowser/docs/guides/requirements.html). Additionally, .NET 6 SDK or higher must be installed.
 
-Request a free 30-day evaluation license key via the [web form](https://www.teamdev.com/dotnetbrowser#evaluate).
+Request a free 30-day evaluation license key via the [web form](https://teamdev.com/dotnetbrowser#evaluate).
 
 Clone this repository using the following command:
  ```bash
