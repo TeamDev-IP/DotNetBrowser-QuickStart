@@ -39,3 +39,11 @@ dotnet cake --lang="csharp" --ui="console" --license-key="your_license_key"
 ```
 
 *Note*: Development container is a headless Linux environment, and these environments do not support WPF or Windows Forms. Therefore, only the console example can be used.
+
+## Contact us
+Feel free to [submit request](https://dotnetbrowser.support.teamdev.com/support/tickets/new) to our support team if you own a commercial license with an active support subscription.
+If you have any questions regarding using DotNetBrowser or the examples in this repository, [contact us via email](mailto:customer-care@teamdev.com?subject=[GitHub]%20Question%20on%20DotNetBrowser%20Quick%20Start).
+
+---
+
+The information in this repository is provided on the following terms: https://www.teamdev.com/terms-and-privacy
