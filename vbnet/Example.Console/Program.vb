@@ -26,6 +26,7 @@ Imports DotNetBrowser.Engine
 
 Module Program
     Sub Main(args() As String)
+        Console.Title = "DotNetBrowser"
         Dim builder = new EngineOptions.Builder()
         ' Uncomment the line below to specify your license key
         ' builder.LicenseKey = "your_license_key"
@@ -43,6 +44,8 @@ Module Program
             System.Console.WriteLine(quote)
             System.Console.WriteLine($"— {author}")
         End Using
+
+        Console.ReadKey()
     End Sub
 End Module
 ' #enddocfragment "Example.Console"
