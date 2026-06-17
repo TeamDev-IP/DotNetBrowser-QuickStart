@@ -6,7 +6,7 @@
     xmlns:WPF="clr-namespace:DotNetBrowser.Wpf;assembly=DotNetBrowser.Wpf"
     x:Class="Embedding.Wpf.MainWindow"
     mc:Ignorable="d"
-    Title="MainWindow" Height="480" Width="800" Closed="Window_Closed">
+    Title="DotNetBrowser — WPF" Height="480" Width="800" Closed="Window_Closed">
     <Grid>
         <WPF:BrowserView Name="browserView" />
     </Grid>

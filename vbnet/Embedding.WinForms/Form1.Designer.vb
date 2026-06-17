@@ -26,7 +26,7 @@ Namespace Embedding.WinForms
 			Me.components = New System.ComponentModel.Container()
 			Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 			Me.ClientSize = New System.Drawing.Size(800, 450)
-			Me.Text = "Form1"
+			Me.Text = "DotNetBrowser — Windows Forms"
 		End Sub
 
 		#End Region
