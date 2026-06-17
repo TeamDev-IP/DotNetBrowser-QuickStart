@@ -26,7 +26,7 @@ Imports DotNetBrowser.Engine
 
 Module Program
     Sub Main(args() As String)
-        Console.Title = "DotNetBrowser"
+        Console.Title = "DotNetBrowser — Console"
         Dim builder = new EngineOptions.Builder()
         ' Uncomment the line below to specify your license key
         ' builder.LicenseKey = "your_license_key"
