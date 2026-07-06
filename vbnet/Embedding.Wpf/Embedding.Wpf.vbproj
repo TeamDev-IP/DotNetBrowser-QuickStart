@@ -9,8 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetBrowser" Version="4.1.1" />
-    <PackageReference Include="DotNetBrowser.WPF" Version="4.1.1" />
+    <PackageReference Include="DotNetBrowser" Version="4.2.0" />
+    <PackageReference Include="DotNetBrowser.WPF" Version="4.2.0" />
   </ItemGroup>
 
 </Project>
