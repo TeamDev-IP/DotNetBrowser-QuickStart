@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetBrowser" Version="4.2.3" />
-    <PackageReference Include="DotNetBrowser.WinForms" Version="4.2.3" />
+    <PackageReference Include="DotNetBrowser" Version="4.3.0" />
+    <PackageReference Include="DotNetBrowser.WinForms" Version="4.3.0" />
   </ItemGroup>
 
 </Project>
